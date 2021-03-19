@@ -46,6 +46,41 @@ vector1[-7] # others except seventh index
 
 vector1[1:3] # from 1 to 3 
 
+# -------------------------------------------------
+# vectorization
+# -------------------------------------------------
+
+
+mean(vector1)
+sd(vector1) # standard deviation
+
+vector5 <- c(1,2,0,0,0,3,1,3,2,7)
+mean(vector5)
+sd(vector5)
+
+vector6 = rnorm(100000, mean = 0, sd = 1)
+# 100000 values, mean = 0, standard deviation = 1
+vector7 = rnorm(100000, mean = 0, sd = 1)
+# 100000 values, mean = 0, standard deviation = 1
+
+
+
+system.time(vector6 + vector7) # worked in a short time
+
+system.time(vector6 * vector7) # worked in a short time
+
+v1 = vector6 * vector7
+head(v1) # top five values 
+length(v1)
+
+# -------------------------------------------------
+# columnization <- we used the cbind method
+# -------------------------------------------------
+
+v67 = cbind(vector6, vector7)
+v1 = vector6 + vector7
+v67 = cbind(vector6, vector7, v1)
+
 
 
 
